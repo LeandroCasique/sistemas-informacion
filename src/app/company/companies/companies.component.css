@@ -1,0 +1,13 @@
+.container-companies{
+    width: 100%;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* padding: 150px 0 220px; */
+}
+table {
+    width: 100%;
+}
+
+button {
+margin: 16px 8px;
+}
