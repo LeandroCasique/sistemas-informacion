@@ -1,18 +1,17 @@
 <div class="container-login">
     <div class="Contenedor">
-        <form>
+        <form [formGroup]="form">
             <div class="contenido">
                 <h2 class="name-login">Login</h2>
                 
-                    <label class="elementos" for="name">Username:</label>
-                    <input class="elementos1" type="name">
+                    <label class="elementos" for="name">Email:</label>
+                    <input class="elementos1" formControlName="Tx_Email" type="email">
                     
                     <label class="elementos" for="username">Password:</label>
+                    <input class="elementos1" formControlName="Tx_Clave" type="password">
                     
-                    <input class="elementos1" type="password">
                     <div class="botones">
-
-                        <button type="submit">Login</button>
+                        <button (click)="login()">Login</button>
                         <button routerLink="/login/sing-up">Sing up</button>
                     </div>
             </div>
