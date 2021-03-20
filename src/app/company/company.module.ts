@@ -4,16 +4,19 @@ import { CommonModule } from '@angular/common';
 import { CompanyRoutingModule } from './company-routing.module';
 import { CompaniesComponent } from './companies/companies.component';
 import { MatTableModule } from '@angular/material/table';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { CreateCompanyComponent } from './create-company/create-company.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
-  declarations: [CompaniesComponent],
+  declarations: [CompaniesComponent, CreateCompanyComponent],
   imports: [
     CommonModule,
     CompanyRoutingModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule
   ]
 })
 export class CompanyModule { }
