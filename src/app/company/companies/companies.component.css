@@ -1,11 +1,12 @@
 .container-companies{
     width: 100%;
-    /* display: flex; */
-    /* justify-content: center; */
+    margin: 2em auto;
+    /*display: flex;*/
+    /*justify-content: center;*/
     /* padding: 150px 0 220px; */
 }
 table {
-    width: 100%;
+    width: 85%;
 }
 
 button {
