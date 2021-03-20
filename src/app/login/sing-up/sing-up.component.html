@@ -1,33 +1,31 @@
 <div class="container-sing-in">
     <div class="Contenedor">
-        <form>
+        <form [formGroup]="form">
             <div class="contenido">
                 <h2 class="name-sing-in">Sing in</h2>
                 
-                    <label class="elementos" for="name">Username:</label>
-                    <input class="elementos1" type="name">
+                <label class="elementos" for="name">Username:</label>
+                <input class="elementos1" formControlName="Nb_Usuario" type="name">
 
-                    <label class="elementos" for="email">E-Mail:</label>
-                    <input class="elementos1" type="email">
-                    
-                    <label class="elementos" for="password">Password:</label>
-                    <input class="elementos1" type="password">
-
-                    <label class="elementos" for="password">Confirmar contraseña:</label>
-                    <input class="elementos1" type="password">
-
-                    <label class="elementos" for="movil">Number movil:</label>
-                    <input class="elementos1" type="text">
-
-                    <div class="botones">
+                <label class="elementos" for="email">E-Mail:</label>
+                <input class="elementos1" formControlName="Tx_Email" type="email">
                 
-                        <input type="submit" value="Login">
-                        <input type="submit" value="Sing in">
-                    </div>
+                <label class="elementos" for="password">Password:</label>
+                <input class="elementos1" formControlName="Tx_Clave" type="password">
 
-               
-                 
+                <label class="elementos" for="password">Confirmar contraseña:</label>
+                <input class="elementos1" formControlName="Tx_ClaveConfirnm" type="password">
+                <span *ngIf="form.errors?.invalid" class="error">
+                    Password doesn't match
+                </span>
 
+                <label class="elementos" for="movil">Number movil:</label>
+                <input class="elementos1" formControlName="Nu_Movil" type="text">
+
+                <div class="botones">
+                    <button routerLink="/login">Login</button>
+                    <button (click)="signUp()">Sing up</button>
+                </div>
             </div>
             
         </form> 
