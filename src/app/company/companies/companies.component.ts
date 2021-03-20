@@ -10,6 +10,7 @@ import { CompaniesService } from 'src/app/services/companies.service';
 
 export class CompaniesComponent implements OnInit {
   public displayedColumns: string[] = ['position', 'name', 'tel', 'number', 'dir', 'lat', 'long', 'country', 'registro', 'buttons'];
+  public dataSource: any = [];
 
   constructor(private companiesService: CompaniesService) {
   }

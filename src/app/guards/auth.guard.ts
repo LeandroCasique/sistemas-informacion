@@ -17,7 +17,6 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean | UrlTree> | boolean | UrlTree {
     return this.auth.tokenAsObservable.pipe(
       map(data => {
-        console.log('entro', data)
         if(data) {
           return true;
         }
