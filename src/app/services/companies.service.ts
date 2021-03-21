@@ -20,8 +20,8 @@ export class CompaniesService {
     return this.http.get(`${this.apiUrl}api/companies`, { headers: { token: this.token } });
   }
 
-  public deteleCompanies() {
-    return this.http.delete(`${this.apiUrl}api/companies/:id`, { headers: { token: this.token } });
+  public deteleCompanies(idCompany) {
+    return this.http.delete(`${this.apiUrl}api/companies/${idCompany}`, { headers: { token: this.token } });
   } //VENIR AQUUÍ LUEGUP AJSDJASGDHGASJDGHASDGJASGDJ
 
 }

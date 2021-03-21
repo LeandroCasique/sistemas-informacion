@@ -16,11 +16,24 @@ export class CompaniesComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getCompanies();
+  }
+
+  getCompanies() {
     this.companiesService.getAllCompanies().subscribe(data => {
       console.log("data", data);
       
       this.dataSource = data;
     });
   }
+
+  deleteCompany(company) {
+    if(company && company.Co_Empresa) {
+      this.companiesService.deteleCompanies(company.Co_Empresa).subscribe(data => {
+        console.log(data);
+        this.getCompanies();
+      })
+    }
+  } 
 
 }
