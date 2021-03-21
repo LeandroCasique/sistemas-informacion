@@ -3,10 +3,14 @@
     margin: 2em auto;
     display: flex;
     justify-content: center;
-    padding: 150px 0 220px;
+    padding: 50px 0px;
 }
 .Contenedor{
     width: 300px;
     padding: 40px 50px 30px;
     box-shadow: 0 1px 5px 1px;
+}
+
+.input {
+    width: 100%;
 }

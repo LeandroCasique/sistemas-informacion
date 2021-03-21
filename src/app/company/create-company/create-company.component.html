@@ -1,25 +1,42 @@
 <div class="container-companies">
-    <div class="Contenedor">
-        
-        <h1>wa mo a morir</h1>
-        
-        <!-- <form>
-            <div class="contenido">
-                <h2 class="name-login">Login</h2>
-                
-                    <label class="elementos" for="name">Email:</label>
-                    <input class="elementos1" formControlName="Tx_Email" type="email">
-                    
-                    <label class="elementos" for="username">Password:</label>
-                    <input class="elementos1" formControlName="Tx_Clave" type="password">
-                    
-                    <div class="botones">
-                        <button routerLink="/login/sing-up">Sing up</button>
-                    </div>
-            </div>
-        </form>  -->
-          
-
-
-    </div>
+    <form class="Contenedor" [formGroup]="form">
+        <mat-form-field class="input" appearance="legacy">
+            <mat-label>Nombre Empresa</mat-label>
+            <input formControlName="Nb_Empresa" matInput placeholder="Nombre Empresa">
+        </mat-form-field>
+        <mat-form-field class="input" appearance="legacy">
+            <mat-label>Registro</mat-label>
+            <input formControlName="Nu_Registro" matInput placeholder="Registro">
+        </mat-form-field>
+        <mat-form-field class="input" appearance="legacy">
+            <mat-label>Direccion</mat-label>
+            <input formControlName="Tx_Direccion" matInput placeholder="Nombre Empresa">
+        </mat-form-field>
+        <mat-form-field class="input" appearance="legacy">
+            <mat-label>Latitud</mat-label>
+            <input formControlName="Nu_Latitud"  matInput type="number" placeholder="Latitud">
+        </mat-form-field>
+        <mat-form-field class="input" appearance="legacy">
+            <mat-label>Longitud</mat-label>
+            <input formControlName="Nu_Longitud"  matInput type="number" placeholder="Longitud">
+        </mat-form-field>
+        <mat-form-field class="input" appearance="legacy">
+            <mat-label>Movil</mat-label>
+            <input formControlName="Nu_Movil"  matInput placeholder="Movil">
+        </mat-form-field>
+        <mat-form-field class="input" appearance="legacy">
+            <mat-label>Telefono</mat-label>
+            <input formControlName="Nu_Telefono"  matInput placeholder="Telefono">
+        </mat-form-field>
+        <mat-form-field class="input" appearance="legacy">
+            <mat-label>Email</mat-label>
+            <input formControlName="Tx_Email"  matInput placeholder="Email">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="createCompany()">
+            {{ id ? 'Actualizar' : 'Crear' }}  Empresa
+        </button>
+        <button mat-raised-button color="primary" routerLink="/companies" style="margin-left: 1em;">
+            Back
+        </button>
+    </form>
 </div>

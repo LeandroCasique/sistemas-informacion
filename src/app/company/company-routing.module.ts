@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: 'create',
     component: CreateCompanyComponent
+  },
+  {
+    path: 'update/:id',
+    component: CreateCompanyComponent
   }
 ];
 

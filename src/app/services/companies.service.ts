@@ -22,6 +22,18 @@ export class CompaniesService {
 
   public deteleCompanies(idCompany) {
     return this.http.delete(`${this.apiUrl}api/companies/${idCompany}`, { headers: { token: this.token } });
-  } //VENIR AQUUÍ LUEGUP AJSDJASGDHGASJDGHASDGJASGDJ
+  }
+
+  public createCompany(company) {
+    return this.http.post(`${this.apiUrl}api/companies`, company, { headers: { token: this.token } });
+  }
+
+  public getOneCompany(idCompany) {
+    return this.http.get(`${this.apiUrl}api/companies/${idCompany}`, { headers: { token: this.token } });
+  }
+
+  public updateCompany(company, idCompany) {
+    return this.http.put(`${this.apiUrl}api/companies/${idCompany}`, company, { headers: { token: this.token } });
+  }
 
 }
