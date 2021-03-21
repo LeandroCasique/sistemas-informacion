@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { OrganizationsService } from 'src/app/services/organizations.service';
 
 @Component({
   selector: 'app-organizations',
@@ -6,14 +8,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./organizations.component.css']
 })
 export class OrganizationsComponent implements OnInit {
-  public displayedColumns: string[] = ['position', 'name', 'org_padre', 'empresa', 'tel', 'email', 'buttons'];
-  public dataSource: any = [
-    {position: 1, name: 'Te quiero Leandro :c', org_padre: 1, empresa: 'test', tel: 1234567, email: "test@test.com",  buttons: 'test'}
-  ];
+  public displayedColumns: string[] = ['Co_Organizacion', 'Nb_Organizacion', 'Co_Organizacion_Organizacion', 'Co_Empresa', 'Nu_Telefono', 'Tx_Email', 'buttons'];
+  public dataSource: any = [];
+  public id;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private route: ActivatedRoute, private organization: OrganizationsService) { 
+    this.id = this.route.snapshot.paramMap.get('id');
+    console.log(this.id)
   }
 
+  ngOnInit(): void {
+    this.getOrganization();
+  }
+
+  getOrganization() {
+    this.organization.getAllOrganizations(this.id).subscribe(data => {
+      console.log(data);
+      this.dataSource = data;
+    });
+  }
+
+  deleteOrganization(idOrganozacion) {
+    this.organization.deleteOrganization(idOrganozacion).subscribe(data => {
+      console.log(data);
+      this.getOrganization();
+    });
+  }
 }

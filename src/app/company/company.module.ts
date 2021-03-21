@@ -10,10 +10,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OrganizationsComponent } from './organizations/organizations.component';
+import { CreateOrganizationsComponent } from './create-organizations/create-organizations.component';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
-  declarations: [CompaniesComponent, CreateCompanyComponent, OrganizationsComponent],
+  declarations: [CompaniesComponent, CreateCompanyComponent, OrganizationsComponent, CreateOrganizationsComponent],
   imports: [
     CommonModule,
     CompanyRoutingModule,
@@ -22,7 +24,8 @@ import { OrganizationsComponent } from './organizations/organizations.component'
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule
   ]
 })
 export class CompanyModule { }

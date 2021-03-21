@@ -1,0 +1,41 @@
+<div class="container-organizations">
+    <div class="content">
+        
+        
+        <div class="container">
+
+            <h1 class="Titulo">Crear organizacion</h1>
+            <form class="formu_orga" [formGroup]="form">
+
+                <mat-form-field class="con" appearance="fill">
+                    <mat-label>Nombre Organizacion</mat-label>
+                    <input formControlName="Nb_Organizacion" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="con" appearance="fill">
+                    <mat-label>Telefono</mat-label>
+                    <input formControlName="Nu_Telefono" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="con" appearance="fill">
+                    <mat-label>E-Mail</mat-label>
+                    <input formControlName="Tx_Email" matInput>
+                </mat-form-field>
+
+                 <mat-form-field class="con" appearance="fill">
+                    <mat-label>Organizacion</mat-label>
+                    <mat-select formControlName="Co_Organizacion_Organizacion">
+                      <mat-option *ngFor="let item of organizations" [value]="item.Co_Organizacion">{{item.Nb_Organizacion}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                
+                
+                <div class="botones">
+                    <button (click)="createOrganization()">{{ idOrganization ? 'Update' : 'Crear' }}</button>
+                </div>
+            </form>
+        </div>    
+
+    </div>
+
+</div>
