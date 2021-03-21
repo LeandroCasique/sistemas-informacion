@@ -1,0 +1,12 @@
+.container-organizations{
+    width: 100%;
+    margin: 2em auto;
+}
+table {
+    width: 80%;
+    margin: 2em auto;
+}
+
+button {
+    margin: 16px 8px;
+}
