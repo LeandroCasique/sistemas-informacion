@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container-organizations{
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 150px 0 220px;
+}
+
+.container{
+  width: 300px;
+  padding: 40px 50px 30px;
+  box-shadow: 0 1px 5px 1px;
+}
+
+.titulo{
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.con{
+  width: 100%;
+  margin-top: 20px;  
+
+}
