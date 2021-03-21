@@ -9,10 +9,11 @@ import { CreateCompanyComponent } from './create-company/create-company.componen
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OrganizationsComponent } from './organizations/organizations.component';
 
 
 @NgModule({
-  declarations: [CompaniesComponent, CreateCompanyComponent],
+  declarations: [CompaniesComponent, CreateCompanyComponent, OrganizationsComponent],
   imports: [
     CommonModule,
     CompanyRoutingModule,
